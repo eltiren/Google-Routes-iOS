@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GooglePolylineRequest.h"
+#import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <GooglePolylineRequestDelegate, MKMapViewDelegate>
+{
+    __weak IBOutlet MKMapView *mapView;
+    __weak IBOutlet UIBarButtonItem *barButton;
+    __weak IBOutlet UIBarButtonItem *barButton2;
+}
 
 @end
